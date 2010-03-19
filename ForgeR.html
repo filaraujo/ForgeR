@@ -1,0 +1,175 @@
+<html>
+	<head>
+		<script src='http://127.0.0.1:8000/Battleforge/ForgeR.html'></script>
+        <title>ForgeR</title>
+        <link href="css/card.css" rel="stylesheet" type="text/css"/>
+        <link href="css/portrait.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery-ui-1.7.2.min.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery-validate.min.js"></script>
+        <script type="text/javascript" src="lib/js/battleforge.js"></script>     
+        <script type="text/javascript" src="lib/js/battleforge_db.js"></script>
+        <script type="text/javascript" src="lib/js/battleforge_renderer.js"></script>      
+        <script type="text/javascript" src="lib/js/battleforge_ui.js"></script> 
+		<script type="text/javascript" src="lib/air/AIRIntrospector.js"></script>
+		<script src="lib/updater/applicationupdater_ui.swf" type="application/x-shockwave-flash"/>
+	</head>
+    <body>
+			
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			Battleforge.manager.init();
+		});
+		</script>
+
+		
+		<div id="forge" class="listing">
+			<div id="header">
+				<a href="#" class="min"></a>
+				<a href="#" class="close"></a>
+			</div>
+			
+				<!-- @section menu-->
+			<div class="menu">
+				<div id="stage_holder">
+					<a href="#" class="active" id="btn_listingStage">Card Listing</a>
+					<a href="#" id="btn_collectionStage">My Collection</a>
+					<a href="#" id="btn_searchStage">
+						Search
+						<input id="query" value="" name="search"/>
+					</a>
+				</div>				
+				<div id="order_holder">				
+					<a href="#" class="order active" id="color">Color</a>
+					<a href="#" class="order" id="alphabetic">Alphabetical</a>
+					<a href="#" class="order" id="type">Type</a>
+				</div>
+				<div id="slider_holder">
+					Scale <div id="slider"></div>
+				</div>				
+				<a href="#" id="feedback">Bugs &amp; Feedback</a>
+			</div>
+				<!-- @section menu /-->
+				
+			<!-- @section filter -->
+			<div id="filter">
+				<a href="#" class="filter" id="fire">fire</a>
+				<a href="#" class="filter" id="frost">frost</a>
+				<a href="#" class="filter" id="nature">nature</a>
+				<a href="#" class="filter" id="shadow">shadow</a>
+				
+				<a href="#" class="filter" id="era1">one</a>
+				<a href="#" class="filter" id="era2">two</a>
+				<a href="#" class="filter" id="era3">three</a>
+				<a href="#" class="filter" id="era4">four</a>
+				
+				<a href="#" class="filter" id="creature">two</a>
+				<a href="#" class="filter" id="building">three</a>
+				<a href="#" class="filter" id="spell">four</a>
+				
+				<a href="#" class="filter" id="common">common</a>
+				<a href="#" class="filter" id="uncommon">uncommon</a>
+				<a href="#" class="filter" id="rare">rare</a>
+				<a href="#" class="filter" id="ultrarare">ultrarare</a>
+				
+				<a href="#" class="filter" id="own">own</a>
+			</div>
+			<!-- @section filter /-->
+			
+			<div id="body" class="thumb">								
+				<!-- @section feedbackStage-->
+				<div class="stage" id="feedbackStage">
+					<form action="" id="issues"> 
+					<fieldset>
+						<h1>Your Information</h1>
+						<div class="row">
+							<label>Name:</label>
+							<input type="text" name="name" class="required" value=""/>
+						</div>
+						<div class="row">
+							<label>E-mail:</label>
+							<input type="text" name="email" class="required email" value=""/>
+							<p>name@domain.com</p>
+						</div>						
+					</fieldset>
+					<fieldset>
+						<div class="row">
+							<select name="i_type" class="required">
+								<option value="Card Error/Update">Card Error/Update</option>
+								<option value="Application Bug">Application Bug</option>
+								<option value="Questions or Comments">Questions or Comments</option>
+							</select>
+						</div>
+						<div class="row">
+							<textarea  name="message" class="required" value=""></textarea>
+							<p>*required</p>
+							<input type="submit" class="submit" value="send">
+						</div>
+					</fieldset>						
+						<div class="issues_feedback"></div>					
+					</form>
+				</div>
+				<!-- @section feedbackStage/-->
+				
+				<!-- @section listingstage -->
+				<div id="listingStage" class="two_filter"></div>
+				<!-- @section listingstage /-->
+				
+				<!-- @section searchstage -->
+				<div id="searchStage"></div>
+				<!-- @section searchstage /-->
+				
+				<!-- @section collectionstage -->
+				<div id="collectionStage"></div>
+				<!-- @section collectionstage /-->
+			</div>
+			
+			<!-- @section cardInfo -->
+			<div id="card_info">
+				<div id="card_holder" class="thumb">
+					<div class="preview"></div>
+				</div>
+				<div id="card_menu">
+					<a href="#" class="active" id="tab_upgrade0">
+						Upgrade 0
+						<span class="collection_remove" >remove from collection</span>
+						<span class="collection_add">add to collection</span>
+					</a>
+					<a href="#" id="tab_upgrade1">
+						Upgrade 1
+						<span class="collection_remove" >remove from collection</span>
+						<span class="collection_add">add to collection</span>
+					</a>
+					<a href="#" id="tab_upgrade2">
+						Upgrade 2
+						<span class="collection_remove" >remove from collection</span>
+						<span class="collection_add">add to collection</span>
+					</a>
+					<a href="#" id="tab_upgrade3">
+						Upgrade 3
+						<span class="collection_remove" >remove from collection</span>
+						<span class="collection_add">add to collection</span>
+					</a>
+					<a href="#" id="tab_loot" >PVE ( Locations )</a>
+					<a href="#" id="tab_claim" >PVP (Claim Cost )</a>
+				</div>
+				<div id="info_holder" class="upgrade0">
+					<ul id="upgrade0"></ul>
+					<ul id="upgrade1"></ul>
+					<ul id="upgrade2"></ul>
+					<ul id="upgrade3"></ul>
+					<ul id="loot"></ul>
+					<ul id="claim">	</ul>
+				</div>
+			</div>
+			<!-- @section cardInfo /-->
+			
+			<div id="footer">
+				<div id="loader"></div>
+				<div id="version"></div>
+			</div>
+		</div>
+		
+    </body>
+</html>

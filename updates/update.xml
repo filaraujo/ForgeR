@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
+  <version>1.5.2</version>
+  <url>http://www.filipearaujo.com/battleforge/updates/ForgeR_v1.5.2.air</url>
+  <description>
+  	<![CDATA[		
+	HotFix
+	-Fixed issue where filtering and then sorting would cause filtering to break
+	 ]]>
+</description>
+</update>

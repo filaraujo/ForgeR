@@ -1,0 +1,782 @@
+/**
+ * @section		UI
+ **/
+html, body{ margin:0; padding:0; }
+p{ padding:0; margin:0; }
+ul, li { padding:0; margin:0; list-style:none; }
+#forge{width:1033px; height:800px; overflow:hidden;font-family: Verdana, Geneva, Arial, Helvetica, sans-serif}
+#header{ position:relative; height:32px; background:url(../images/ui/bg_top.png) no-repeat; cursor:move}
+#header a.min{ position:absolute; top:6px; right:22px; width:15px; height:15px; background:url(../images/ui/min.jpg)}
+#header a.close{ position:absolute; top:6px; right:5px; width:15px; height:15px; background:url(../images/ui/close.jpg)}
+#body {  padding:3px 4px;background:#000; height:543px; overflow:hidden; }
+#footer{ position:relative; height:23px; font-size:11px; color: #df8425; background:url(../images/ui/bg_bottom.png); font-weight:bold; }
+#version { position:absolute; top:4px; right:10px; font-size:9px; color:#ccc; }
+/** loader **/
+#loader { position:absolute; top:6px; left:15px; width:118px; height:9px; background:url(../images/ui/loader.gif); }
+#loader.on { background:url(../images/ui/loader-on.gif); }
+
+/**
+ * @section		FILTERS
+ **/
+#filter{ position:absolute; top: 60px; left: 3px; width:41px;}
+#filter a{display:block; width:41px; height:33px; background:url(../images/ui/filter.png); text-indent:-9999px;}
+#forge #filter a.off{background-position-y:-33px; }
+#filter a{margin-bottom:1px;}
+#filter #shadow{ background-position: -41px 0; }
+#filter #frost{ background-position: -82px 0; }
+#filter #nature{ background-position: -123px 0; }
+#filter #era1{ background-position: -164px 0; }
+#filter #era2{ background-position: -205px 0; }
+#filter #era3{ background-position: -246px 0; }
+#filter #era4{ background-position: -287px 0; }
+#filter #creature{ background-position: -328px 0; }
+#filter #building{ background-position: -369px 0; }
+#filter #spell{ background-position: -410px 0; }
+#filter #common{ background-position: -451px 0; }
+#filter #uncommon{ background-position: -492px 0; }
+#filter #rare{ background-position: -533px 0; }
+#filter #ultrarare{ background-position:  -574px 0; }
+#filter #own{ background-position:  -615px 0; display:none;}
+.collection #filter #own{ display:block;}
+
+#listingStage.fire_filter .fire, #collectionStage.fire_filter .fire,  
+#listingStage.shadow_filter .shadow, #collectionStage.shadow_filter .shadow,
+#listingStage.frost_filter .frost, #collectionStage.frost_filter .frost,
+#listingStage.nature_filter .nature, #collectionStage.nature_filter .nature,
+#listingStage.era1_filter .era1, #collectionStage.era1_filter .era1,
+#listingStage.era2_filter .era2, #collectionStage.era2_filter .era2,
+#listingStage.era3_filter .era3, #collectionStage.era3_filter .era3,
+#listingStage.era4_filter .era4, #collectionStage.era4_filter .era4,
+#listingStage.creature_filter .creature, #collectionStage.creature_filter .creature,
+#listingStage.building_filter .building, #collectionStage.building_filter .building,
+#listingStage.spell_filter .spell, #collectionStage.spell_filter .spell,
+#listingStage.common_filter .common, #collectionStage.common_filter .common,
+#listingStage.uncommon_filter .uncommon, #collectionStage.uncommon_filter .uncommon,
+#listingStage.rare_filter .rare, #collectionStage.rare_filter .rare,
+#listingStage.ultrarare_filter .ultrarare, #collectionStage.ultrarare_filter .ultrarare,
+#collectionStage.own_filter .own{ display:none; }
+
+/** menu **/
+.menu { position:relative; background:#e1792d; border:solid #87400d;  border-width:1px 0; height:21px; line-height:21px; color:#87400d; font-size:11px; }
+.menu a{ float:left; padding:0 11px; color:#87400d;  text-decoration:none; }
+.menu a input{ position:relative; top:0; display:none; border:1px solid #a66536;  padding-left:2px; width:135px; background:url(../images/ui/input_bg.png)}
+.menu a:hover{ color:#fff; }
+.menu a.active { background:#bf5c1f; padding:0 10px; border:solid #b6581e;  border-width: 0 1px; }
+.menu a.active:hover{ color:#87400d; }
+.menu a.active input{ display:inline; }
+.menu input{ position:relative; top:-1px; color:#000; font-size:10px; margin-left:5px; margin-top:-4px; }
+#order_holder{  position:absolute; top:0px; left:650px; width:200px;  font-size:11px;  }
+#slider_holder{ position:absolute; top:0px; left:405px; width:210px;  font-size:11px; }
+#slider{ position:absolute; top:6px; right:15px;  background:url(../images/ui/slider.png); width:150px; height:8px;  cursor:pointer; }
+#slider a{ position:absolute; top:-3px; left:0; background:url(../images/ui/slide.png); height:16px; width:16px;display:block;  z-index:1000; margin-left:-5px; padding:0; }
+#feedback{  position:absolute; top:0px; right:0; }
+
+/**
+ * @section		Stages
+ **/
+#listingStage,  #searchStage, #collectionStage{ margin-left:42px; overflow:auto; height:543px;  }
+#forge.collection #collectionStage, #forge.listing #listingStage, #forge.search #searchStage{ display:block}
+#forge.collection #listingStage, #forge.collection #searchStage, 
+#forge.listing #collectionStage, #forge.listing #searchStage, 
+#forge.search #collectionStage, #forge.search #listingStage { display:none }
+
+#collectionStage h1{ margin:4px 0 0 5px; color:#fff; font-size:14px; clear:both;}
+#collectionStage div.card_group{ overflow:auto; }
+#collectionStage div.card_group h1{ margin:0; padding:2px 2px 2px 4px; }
+#feedbackStage{  display:none;position: absolute; top: 55px; left:0; height:120px; width:1013px; padding:10px;  font-size:10px;  color:#87400D; border:solid #87400d;  border-width: 1px 0; background:#bf5c1f; z-index: 100; }
+#feedbackStage div.row { position:relative;  margin-bottom:5px; }
+#feedbackStage div.dcl { position:absolute; left:0px; bottom:-10px; background:url(../images/ui/bg_form.png) bottom left ; width:1033px; height:10px; }
+#feedbackStage fieldset { float:left; border:0; padding:0; margin: 0 40px  0 20px;}
+#feedbackStage h1 { margin:0 0 10px; font-size:13px; }
+#feedbackStage label { float:left; width:50px; height:18px; line-height:18px;  }
+#feedbackStage fieldset textarea, #feedbackStage fieldset input, #feedbackStage fieldset select{ font-family:Verdana, Geneva, Arial, Helvetica; font-size:10px; background:url(../images/ui/input_bg.png) #fff repeat-x;   border:1px solid #A66536;}
+#feedbackStage fieldset input { width:275px; }
+#feedbackStage textarea { width:450px; height:80px; }
+#feedbackStage em { position:absolute; left:-8px; top:5px;  }
+#feedbackStage .submit { position:absolute; top:85px; right:0;   width:auto; float:right; }
+.thumb {   font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; letter-spacing:-1px;}
+
+/**
+ * @section		Card Info
+ **/
+#card_info { position:relative; background:#222223; height:173px; border-top:1px solid #454546;}
+#card_holder { float:left;width:125px; height:173px; border-right:1px solid #454546; padding:2px 0 0 4px}
+#card_holder .preview { background:url(../images/ui/preview.png); width:120px; height:167px; }
+#card_holder .status { display:none }
+#card_menu {  margin-left:130px; height:20px; background:#454546;  }
+#card_menu a{ float:left; margin:0; padding:0 20px;  height:20px; line-height:18px; color:#bebdbd; font-size:11px; letter-spacing:-1px; cursor:pointer; border:solid #393939; border-width: 0 1px 0 0; text-decoration:none; }
+#card_menu a.active{ background:#373738 ; border-color:#313131; color: #787879}
+#card_menu .collection_remove, #card_menu .collection_add {   display:none; height:16px; margin-left:15px; padding-left:15px; font-size:11px; background:url(../images/ui/collection.png) no-repeat; color:#fff;text-decoration:none;}  
+#card_menu .active .collection_remove {  background-position: 0 2px; color:#b8090b}
+#card_menu .active .collection_add { background-position: 0 -15px; color:#5eb828}
+#card_menu .active.add .collection_add, #card_menu .active.remove .collection_remove{ display:inline;}
+#info_holder{ margin-left:132px; padding:3px; }
+#info_holder ul { margin:0; padding: 7px; height:136px; overflow-y:auto}
+#info_holder li {font-size:11px; margin-bottom:15px; padding-left:19px; height:auto; display:block; }
+#info_holder .activated,
+#info_holder .passive,
+#info_holder .interval,
+#info_holder .enabling,
+#info_holder .cast,
+#info_holder .undefined{ margin:0; font-weight:bold; height:14px; }
+#info_holder h4 { margin:0;}
+#upgrade0, #upgrade1, #upgrade2, #upgrade3, #loot, #claim { display:none; }
+#info_holder.upgrade0 #upgrade0, #info_holder.upgrade1 #upgrade1,  #info_holder.upgrade2 #upgrade2, #info_holder.upgrade3 #upgrade3, #info_holder.loot #loot, #info_holder.claim #claim { display:block; }
+#info_holder #loot li, #info_holder #claim li{ background:url(../images/ui/u_level.png) no-repeat;  padding-left:30px; margin:0 30px 0 0;float:left; width:200px; height:136px; }
+#info_holder #loot li b{ font-size:12px; }
+#info_holder #loot li p{ margin-bottom:11px;}
+#info_holder #loot li.u2, #info_holder #claim li.u2{ background-position: 0 -136px; }
+#info_holder #loot li.u3, #info_holder #claim li.u3{ background-position: 0 -272px; }
+#info_holder #claim li  { padding-left:40px;}
+#info_holder #claim li{ margin-top:15px; height:106px;}
+#info_holder #claim li div{ background:url(../images/ui/token.png) no-repeat;  font-size:11px;  margin-bottom:3px; padding-left:32px;  height:22px; line-height:22px;}
+#info_holder #claim li div.victory{ background-position: 0 -24px; }
+#info_holder #claim li div.battle{ background-position: 0 -50px; }
+#info_holder #claim li div.pvp{ background:url(../images/ui/pvprank.png) no-repeat;  height:21px; }
+#info_holder #claim li div.rank_two { background-position: 0  -22px; }
+#info_holder #claim li div.rank_three { background-position: 0  -47px; }
+#info_holder #claim li div.rank_four { background-position: 0  -72px; }
+#info_holder #claim li div.rank_five { background-position: 0 -97px; }
+#info_holder #claim li div.rank_six { background-position: 0  -122px; }
+#info_holder #claim li div.rank_seven { background-position: 0  -147px; }
+#info_holder #claim li div.rank_eight { background-position: 0  -172px; }
+#info_holder #claim li div.rank_nine { background-position: 0  -197px; }
+#info_holder #claim li div.rank_ten { background-position: 0  -222px; }
+#info_holder #claim li div.rank_eleven { background-position: 0 -247px; }
+#info_holder #claim li div.rank_twelve { background-position: 0  -272px; }
+#info_holder #claim li div.rank_thirteen { background-position: 0  -297px; }
+#info_holder #claim li div.rank_fourteen { background-position: 0  -322px; }
+#info_holder #claim li div.rank_fifteen { background-position: 0  -347px; }
+#info_holder #claim li div.rank_sixteen { background-position: 0  -372px; }
+#info_holder #claim li div.rank_seventeen { background-position: 0  -397px; }
+
+
+
+/**
+ * @section		Card layout
+ **/
+.layout{ position:relative; float:left; }
+.card { position:absolute; z-index:2;  cursor:pointer;  }
+.portrait{ position:absolute; z-index:1;}
+.rarity{ position:absolute;  z-index:3  }
+.status{ position:absolute;  z-index:6; width:100%; background:url(../images/ui/collection_own.png) no-repeat;}
+.weapontype{ position:absolute; z-index:3; }
+.health{ position:absolute; z-index:3;  }
+.footer{ position:absolute;  z-index:3 }
+.name{ position:absolute;  color:#fff; z-index:3; }
+.cost{ position:absolute; text-align:center; color:#fff;  z-index:3; }
+.attack{ position:absolute; color:#fff; z-index:4;  }
+.defense{ position:absolute; color:#fff; z-index:4;  }
+.category{ position:absolute;color:#fff; z-index:3;  }
+.orb{ position:absolute; z-index:4 }
+
+
+/**
+ * @notes		Default Cards
+ * 						card - 1148x267
+ * 						rarity - 121x30
+ * 						footer - 1148x43
+ * 						attack - 322x203
+ * 						health -73x148
+ * 
+ * @notes		Thumb Cards
+ *							card - 720x168
+ * 						footer - 720x27
+ * 						attack - 202x128
+ * 						health -46x93
+ * 
+ * @note			HD Cards
+ * 						card - 1440x335
+ * 						rarity - 152x38
+ * 						footer - 1439x54
+ * 						attack - 404x255
+ * 						health -92x186
+ **/
+
+
+.layout{ width:191px; height:267px;  }
+.thumb .layout{ width:120px; height:167px; }
+.hd .layout{ width:240px; height:335px;  }
+
+.card {  top:0; left:0; width:191px; height:267px;  background:url(../images/sprites/default/card.png); }
+.thumb .card { top:0; left:0; width:120px; height:167px;  background:url(../images/sprites/thumb/card.png); }
+.hd .card {  top:0; left:0; width:240px; height:335px;  background:url(../images/sprites/HD/card.png); }
+
+.portrait{  top:25px; left:13px; width:167px; height:151px;  }
+.thumb .portrait{ top:16px; left:8px; width:105px; height:96px;}
+.hd .portrait{  top:33px; left:15px; width:209px; height:189px }
+
+.rarity{  bottom:3px; right:5px; width:30px; height:30px; background:url(../images/sprites/default/rarity.png);  }
+.thumb .rarity{  bottom:1px; right:3px; width:19px; height:19px; background:url(../images/sprites/thumb/rarity.png)  }
+.hd .rarity{  bottom:4px; right:6px; width:38px; height:38px; background:url(../images/sprites/HD/rarity.png)  }
+
+.status{  top:101px; left:5px; height:53px;  background-position: 0 -65px;  }
+.thumb .status{  top:62px; left:0; height:32px; background-position: 0 -117px }
+.hd .status{  top:127px; left:5px; height:64px; background-position: 0 0 }
+
+.weapontype{  bottom:0; left:1px; width:34px; height:33px;  background:url(../images/sprites/default/attack.jpg) 0 0; }
+.thumb .weapontype{  width:21px; height:21px;  background:url(../images/sprites/thumb/attack.jpg) 0 0; }
+.hd .weapontype{  bottom:0; left:1px; width:43px; height:42px;  background:url(../images/sprites/HD/attack.jpg) 0 0; }
+
+.health{  bottom:4px; left:98px; width:16px; height:24px; background:url(../images/sprites/default/health.jpg); }
+.thumb .health{ bottom:2px; left:61px; width:10px; height:14px; background:url(../images/sprites/thumb/health.jpg); }
+.hd .health{  bottom:5px; left:123px; width:21px; height:30px; background:url(../images/sprites/HD/health.jpg);   }
+
+.footer{bottom:0; left:0; width:191px; height:43px; background:url(../images/sprites/default/footer.jpg) bottom left; }
+.thumb .footer{ bottom:0; left:0; width:120px; height:26px; background:url(../images/sprites/thumb/footer.jpg) no-repeat; }
+.hd .footer{  bottom:0; left:0; width:240px; height:54px; background:url(../images/sprites/HD/footer.jpg); }
+
+.name{  top:10px; left:23px; font-size:12px;  }
+.thumb .name{  top:4px; left:14px; font-size:9px; }
+.hd .name{  top:12px; left:29px; color:#fff; font-size:14px;  letter-spacing:1px;  }
+
+.cost{ top:11px; right:13px;  width:24px; height:13px; font-size:10px; }
+.thumb .cost{ top:5px; right:6px;  width:20px; height:10px; font-size:9px;}
+.hd .cost{  top:14px; right:12px;  width:40px; height:20px;font-size:13px;  }
+
+.attack{ bottom:9px; left:39px; font-size:13px;  }
+.thumb .attack{ bottom:5px; left:22px;  font-size:9px; }
+.hd .attack{  bottom:12px; left:47px; font-size:16px;  }
+
+.defense{bottom:9px;  right:41px; font-size:13px;  }
+.thumb .defense{ bottom:5px;  right:28px;  font-size:9px; }
+.hd .defense{  bottom:12px;  right:52px; font-size:16px; }
+
+.category{ bottom:97px; left:18px;  font-size:12px;  }
+.thumb .category{ bottom:60px; left:12px;  font-size:9px;  }
+.hd .category{  bottom:123px; left:21px; font-size:15px; }
+
+.orb{  top:27px; right:5px; width:40px; height:16px; }
+.thumb .orb{ top:16px; right:2px; width:27px; height:11px; }
+.hd .orb{  top:33px; right:5px; width:54px; height:22px; }
+
+/**
+ * @section		status
+ **/
+#listingStage .status ,#searchStage .status{ display:none; }
+#collectionStage .want .status{ display:none; }
+
+
+/**
+ * @section		portrait
+ **/
+.fire .portrait{background:url(../images/sprites/default/cards_fire.jpg)}
+.thumb .fire .portrait{background:url(../images/sprites/thumb/cards_fire.jpg)}
+.hd .fire .portrait{background:url(../images/sprites/HD/cards_fire.jpg)}
+
+.frost .portrait{background:url(../images/sprites/default/cards_frost.jpg)}
+.thumb .frost .portrait{background:url(../images/sprites/thumb/cards_frost.jpg)}
+.hd .frost .portrait{background:url(../images/sprites/HD/cards_frost.jpg)}
+
+.nature .portrait{background:url(../images/sprites/default/cards_nature.jpg)}
+.thumb .nature .portrait{background:url(../images/sprites/thumb/cards_nature.jpg)}
+.hd .nature .portrait{background:url(../images/sprites/HD/cards_nature.jpg)}
+
+.shadow .portrait{background:url(../images/sprites/default/cards_shadow.jpg)}
+.thumb .shadow .portrait{background:url(../images/sprites/thumb/cards_shadow.jpg)}
+.hd .shadow .portrait{background:url(../images/sprites/HD/cards_shadow.jpg)}
+/**
+ * @section		rarity
+ **/
+.rarity.common{ background-position: -90px 0;  }
+.thumb .rarity.common{ background-position: -58px 0;  }
+.hd .rarity.common{ background-position: -114px 0;  }
+
+.rarity.uncommon{ background-position: -60px 0; }
+.thumb .rarity.uncommon{ background-position: -39px 0; }
+.hd .rarity.uncommon{ background-position: -76px 0; }
+
+.rarity.rare{ background-position:  -30px 0; }
+.thumb .rarity.rare{ background-position:  -20px 0; }
+.hd .rarity.rare{ background-position:  -38px 0; }
+
+.rarity.ultrarare{  background-position: 0 0; }
+.thumb .rarity.ultrarare{  background-position: 0 0; }
+.hd .rarity.ultrarare{  background-position: 1px 0; }
+/**
+ * @section		orb
+ **/
+.orb li{ width:9px; height:9px; position:absolute; background:url(../images/sprites/default/orb.png); display:block; }
+.thumb .orb li{ width:6px; height:6px; position:absolute; background:url(../images/sprites/thumb/orb.png); }
+.hd .orb li{ width:11px; height:11px; position:absolute; background:url(../images/sprites/HD/orb.png); }
+
+.orb .one{top:2px; right:0px; }
+.thumb .orb .one{top:2px; right:1px; }
+.hd .orb .one{top:4px; right:2px; }
+
+.orb .two{ top:5px; right:10px;}
+.thumb .orb .two{ top:3px; right:7px;}
+.hd .orb .two{ top:7px; right:15px;}
+
+.orb .three{top:5px; right:20px; }
+.thumb .orb .three{top:3px; right:14px; }
+.hd .orb .three{top:7px; right:28px; }
+
+.orb .four{ top:2px; right:30px; }
+.thumb .orb .four{ top:2px; right:20px; }
+.hd .orb .four{ top:4px; right:40px; }
+
+.orb .R{ background-position:0 0;}
+.thumb .orb .R{ background-position:0 0;}
+.hd .orb .R{ background-position:0 0;}
+
+.orb .B{ background-position:-9px 0;}
+.thumb .orb .B{ background-position:-5px 0;}
+.hd .orb .B{ background-position:-11px 0;}
+
+.orb .N{ background-position:-17px 0;}
+.thumb .orb .N{ background-position:-11px 0;}
+.hd .orb .N{ background-position:-22px 0;}
+
+.orb .S{ background-position:-26px 0;}
+.thumb .orb .S{ background-position:-16px 0;}
+.hd .orb .S{ background-position:-33px 0;}
+
+.orb .C{ background-position:-35px 0;}
+.thumb .orb .C{ background-position:-22px 0;}
+.hd .orb .C{ background-position:-44px 0;}
+
+.orb .E{ background-position:-44px 0;}
+.thumb .orb .E{ background-position:-29px 0;}
+.hd .orb .E{ background-position:-55px 0;}
+/**
+ * @section		.upgrades
+ **/
+
+ li{ background:url(../images/sprites/default/abilities_type.png) 0 -120px no-repeat;margin-bottom:0px; padding:0;  font-size:11px; color:#fff;  display:none;}
+.thumb li{ background:url(../images/sprites/thumb/abilities_type.png) 0 -120px no-repeat;  font-size:9px; margin-top:1px; height:9px; line-height:8px;}
+.hd li{ background:url(../images/sprites/HD/abilities_type.png) 0 -120px no-repeat; font-size:14px; margin-bottom:4px; height:14px; line-height:14px; }
+
+.upgrades0, .upgrades1,.upgrades2,.upgrades3 { display:none; }
+.upgrade0 .upgrades0, .upgrade1 .upgrades1, .upgrade2 .upgrades2, .upgrade3 .upgrades3 { display:block; }
+.upgrade1 .upgrades1 li, .upgrade2 .upgrades2 li, .upgrade3 .upgrades3 li{ display:block; }
+
+.info .upgrades0, .info .upgrades1, .info .upgrades2,.info .upgrades3{ position:absolute; list-style:none; margin:0; padding:0; z-index:5;  top:178px; left:13px; width:165px;  }
+.thumb .info .upgrades0, .thumb .info .upgrades1, .thumb .info .upgrades2, .thumb .info .upgrades3{ top:109px; left:8px; width:102px; }
+.hd .info .upgrades0, .hd .info .upgrades1, .hd .info .upgrades2, .hd .info .upgrades3{  top:223px; left:16px; width:204px;  }
+
+.upgrade1 .footer, .upgrade1 .attack,.upgrade1 .cost,.upgrade1 .orb,.upgrade1 .defense,.upgrade1 .health,.upgrade1 .weapontype,.upgrade1 .rarity,
+.upgrade2 .footer, .upgrade2 .attack,.upgrade2 .cost,.upgrade2 .orb,.upgrade2 .defense,.upgrade2 .health,.upgrade2 .weapontype,.upgrade2 .rarity,
+.upgrade3 .footer, .upgrade3 .attack,.upgrade3 .cost,.upgrade3 .orb,.upgrade3 .defense,.upgrade3 .health,.upgrade3 .weapontype,.upgrade3 .rarity{display:none; }
+
+.cast, .undefined { display:block; }
+.activated, .passive, .interval, .enabling{ padding-left:19px; display:block; }
+.thumb .activated, .thumb .passive,.thumb .interval, .thumb .enabling{ padding-left:12px; }
+.hd .activated, .hd .passive, .hd .interval, .hd .enabling{ padding-left:24px; }
+
+.activated{ background-position: 0 -1px; }
+.passive{ background-position: 0 -14px; }
+.enabling{background-position: 0 -29px; }
+.interval{background-position: 0 -44px; }
+
+.thumb .activated{ background-position: 0 0; }
+.thumb .passive{ background-position: 0 -8px; }
+.thumb .enabling{background-position: 0 -17px; }
+.thumb .interval{background-position: 0 -27px; }
+
+.hd .activated{ background-position: 0 -1px; }
+.hd .passive{ background-position: 0 -18px; }
+.hd .enabling{background-position: 0 -37px; }
+.hd .interval{background-position: 0 -56px; }
+
+.uera0, .uera1, .uera2, .uera3 { background:url(../images/sprites/default/rank.png) 20px right no-repeat; padding-right:20px; }
+.uera1 { background-position: 93% -1px }
+.uera2 { background-position: -18px right}
+.uera3 { background-position: -35px right}
+
+.thumb .uera0,.thumb  .uera1,.thumb  .uera2,.thumb  .uera3 { background:url(../images/sprites/thumb/rank.png) 20px right no-repeat; padding-right:15px;   }
+.thumb .uera1 { background-position: 93% 1px}
+.thumb .uera2 { background-position: -10px right}
+.thumb .uera3 { background-position: -23px right}
+
+.hd .uera0,.hd  .uera1,.hd .uera2,.hd  .uera3 { background:url(../images/sprites/hd/rank.png) 20px right no-repeat; padding-right:24px;   }
+.hd .uera1 { background-position: 93% -1px}
+.hd .uera2 { background-position: -23px right}
+.hd .uera3 { background-position: -46px right}
+
+/**-
+ * @section		Fire 
+ **/
+.fire .card, .fire .footer{  background-position:  0 0 }
+#forge .fire.upgrade1 .card{  background-position:  0 -267px }
+#forge .fire.upgrade2 .card{  background-position:  0 -534px }
+#forge .fire.upgrade3 .card{  background-position:  0 -801px }
+.thumb .fire .card, .thumb .fire .footer{  background-position:  0 0 }
+#forge .thumb .fire.upgrade1 .card{  background-position:  0 -168px }
+#forge .thumb .fire.upgrade2 .card{  background-position:  0 -336px }
+#forge .thumb .fire.upgrade3 .card{  background-position:  0 -504px }
+.hd .fire .card, .hd .fire .footer{  background-position:  0 0 }
+#forge .hd .fire.upgrade1 .card{  background-position:  0 -335px }
+#forge .hd .fire.upgrade2 .card{  background-position:  0 -670px }
+#forge .hd .fire.upgrade3 .card{  background-position:  0 -1005px }
+
+.fire .weapontype.special{ background-position: 0 -1px; }
+.hd .fire .weapontype.special{ background-position: 0 0; }
+
+.fire .weapontype.mxl{ background-position: -36px -1px; }
+.thumb .fire .weapontype.mxl{ background-position: -22.5px 0; }
+.hd .fire .weapontype.mxl{ background-position: -45px 0; }
+
+.fire .weapontype.ml{ background-position: -72px -1px; }
+.thumb .fire .weapontype.ml{ background-position: -45px 0; }
+.hd .fire .weapontype.ml{ background-position: -90px 0; }
+
+.fire .weapontype.mm{ background-position: -108px -1px; }
+.thumb .fire .weapontype.mm{ background-position: -67.5px 0; }
+.hd .fire .weapontype.mm{ background-position: -135px 0; }
+
+.fire .weapontype.ms{ background-position: -144px -1px; }
+.thumb .fire .weapontype.ms{ background-position: -90px 0; }
+.hd .fire .weapontype.ms{ background-position: -180px 0; }
+
+.fire .weapontype.rxl{ background-position: -179px -1px; }
+.thumb .fire .weapontype.rxl{ background-position: -112.5px 0; }
+.hd .fire .weapontype.rxl{ background-position: -225px 0; }
+
+.fire .weapontype.rl{ background-position: -215px -1px; }
+.thumb .fire .weapontype.rl{ background-position: -135px 0; }
+.hd .fire .weapontype.rl{ background-position: -270px 0; }
+
+.fire .weapontype.rm{ background-position: -251px -1px; }
+.thumb .fire .weapontype.rm{ background-position: -157.5px 0; }
+.hd .fire .weapontype.rm{ background-position: -315px 0; }
+
+.fire .weapontype.rs{ background-position: -287px -1px; }
+.thumb .fire .weapontype.rs{ background-position: -180px 0; }
+.hd .fire .weapontype.rm{ background-position: -315px 0; }
+
+.fire .health.xl{ background-position: -55px 0; }
+.thumb .fire .health.xl{ background-position: -35px 0; }
+.hd .fire .health.xl{ background-position: -69px 0; }
+
+.fire .health.l{ background-position: -37px 0; }
+.thumb .fire .health.l{ background-position: -23px 0; }
+.hd .fire .health.l{ background-position: -46px 0; }
+
+.fire .health.m{ background-position: -19px 0; }
+.thumb .fire .health.m{ background-position: -12px 0; }
+.hd .fire .health.m{ background-position: -23px 0; }
+
+.fire .health.s{ background-position: 0  0; }
+.thumb .fire .health.s{ background-position: 0  0; }
+.hd .fire .health.s{ background-position: 0  0; }
+/**
+ * @section		Frost 
+ **/
+.frost  .card, .frost .footer{  background-position: -191px 0}
+#forge .frost.upgrade1 .card{  background-position:  -191px -267px }
+#forge .frost.upgrade2 .card{  background-position:  -191px -534px }
+#forge .frost.upgrade3 .card{  background-position:  -191px -801px }
+.thumb .frost .card, .thumb .frost .footer{  background-position: -120px 0}
+#forge .thumb .frost.upgrade1 .card{  background-position:  -120px -168px }
+#forge .thumb .frost.upgrade2 .card{  background-position:  -120px -336px }
+#forge .thumb .frost.upgrade3 .card{  background-position:  -120px -504px }
+.hd .frost .card, .hd .frost .footer{  background-position: -240px 0}
+#forge .hd .frost.upgrade1 .card{  background-position: -240px -335px }
+#forge .hd .frost.upgrade2 .card{  background-position: -240px -670px }
+#forge .hd .frost.upgrade3 .card{  background-position: -240px -1005px }
+
+.frost .weapontype.special{ background-position: 0 -35px; }
+.thumb .frost .weapontype.special{ background-position: 0 -22px; }
+.hd .frost .weapontype.special{ background-position: 0 -44px; }
+
+.frost .weapontype.mxl{ background-position: -36px -35px; }
+.thumb .frost .weapontype.mxl{ background-position: -22.5px -22px; }
+.hd .frost .weapontype.mxl{ background-position: -45px -44px; }
+
+.frost .weapontype.ml{ background-position: -72px -35px; }
+.thumb .frost .weapontype.ml{ background-position: -45px -22px; }
+.hd .frost .weapontype.ml{ background-position: -90px -44px; }
+
+.frost .weapontype.mm{ background-position: -108px -35px; }
+.thumb .frost .weapontype.mm{ background-position: -67.5px -22px; }
+.hd .frost .weapontype.mm{ background-position: -135px -44px; }
+
+.frost .weapontype.ms{ background-position: -144px -35px; }
+.thumb .frost .weapontype.ms{ background-position: -90px -22px; }
+.hd .frost .weapontype.ms{ background-position: -180px -44px; }
+
+.frost .weapontype.rxl{ background-position: -179px -35px; }
+.thumb .frost .weapontype.rxl{ background-position: -112.5px -22px; }
+.hd .frost .weapontype.rxl{ background-position: -225px -44px; }
+
+.frost .weapontype.rl{ background-position: -215px -35px; }
+.thumb .frost .weapontype.rl{ background-position: -135px -22px; }
+.hd .frost .weapontype.rl{ background-position: -270px -44px; }
+
+.frost .weapontype.rm{ background-position: -251px -35px; }
+.thumb .frost .weapontype.rm{ background-position: -157.5px -22px; }
+.hd .frost .weapontype.rm{ background-position: -315px -44px; }
+
+.frost .weapontype.rs{ background-position: -287px -35px; }
+.thumb .frost .weapontype.rs{ background-position: -180px -22px; }
+.hd .frost .weapontype.rs{ background-position: -360px -44px; }
+
+.frost .health.xl{ background-position: -55px -25px; }
+.thumb .frost .health.xl{ background-position: -35px -16px; }
+.hd .frost .health.xl{ background-position: -69px -31px; }
+
+.frost .health.l{ background-position: -37px -25px; }
+.thumb .frost .health.l{ background-position: -23px -16px; }
+.hd .frost .health.l{ background-position: -46px -31px; }
+
+.frost .health.m{ background-position: -19px -25px; }
+.thumb .frost .health.m{ background-position: -12px -16px; }
+.hd .frost .health.m{ background-position: -23px -31px; }
+
+.frost .health.s{ background-position: 0  -25px; }
+.thumb .frost .health.s{ background-position: 0  -16px; }
+.hd .frost .health.s{ background-position: 0  -31px; }
+/**
+ * @section		Nature 
+ **/
+.nature  .card, .nature .footer{  background-position: -382px 0}
+#forge .nature.upgrade1 .card{  background-position:  -381px -267px }
+#forge .nature.upgrade2 .card{  background-position:  -382px -534px }
+#forge .nature.upgrade3 .card{  background-position:  -382px -801px }
+.thumb .nature .card, .thumb .nature .footer{  background-position: -240px 0}
+#forge .thumb .nature.upgrade1 .card{  background-position:  -240px -168px }
+#forge .thumb .nature.upgrade2 .card{  background-position:  -241px -336px }
+#forge .thumb .nature.upgrade3 .card{  background-position:  -241px -504px }
+.hd .nature .card, .hd .nature .footer{  background-position: -480px 0}
+#forge .hd .nature.upgrade1 .card{  background-position: -480px -335px }
+#forge .hd .nature.upgrade2 .card{  background-position: -481px -670px }
+#forge .hd .nature.upgrade3 .card{  background-position: -481px -1005px }
+
+.nature .weapontype.special{ background-position: 0 -69px; }
+.thumb .nature .weapontype.special{ background-position: 0 -43px; }
+.hd .nature .weapontype.special{ background-position: 0 -87px; }
+
+.nature .weapontype.mxl{ background-position: -36px -69px; }
+.thumb .nature .weapontype.mxl{ background-position: -22.5px -43px; }
+.hd .nature .weapontype.mxl{ background-position: -45px -87px; }
+
+.nature .weapontype.ml{ background-position: -72px -69px; }
+.thumb .nature .weapontype.ml{ background-position: -45px -43px; }
+.hd .nature .weapontype.ml{ background-position: -90px -87px; }
+
+.nature .weapontype.mm{ background-position: -108px -69px; }
+.thumb .nature .weapontype.mm{ background-position: -67.5px -43px; }
+.hd .nature .weapontype.mm{ background-position: -135px -87px; }
+
+.nature .weapontype.ms{ background-position: -144px -69px; }
+.thumb .nature .weapontype.ms{ background-position: -90px -43px; }
+.hd .nature .weapontype.ms{ background-position: -180px -87px; }
+
+.nature .weapontype.rxl{ background-position: -179px -69px; }
+.thumb .nature .weapontype.rxl{ background-position: -112.5px -43px; }
+.hd .nature .weapontype.rxl{ background-position: -225px -87px; }
+
+.nature .weapontype.rl{ background-position: -215px -69px; }
+.thumb .nature .weapontype.rl{ background-position: -135px -43px; }
+.hd .nature .weapontype.rl{ background-position: -270px -87px; }
+
+.nature .weapontype.rm{ background-position: -251px -69px; }
+.thumb .nature .weapontype.rm{ background-position: -157.5px -43px; }
+.hd .nature .weapontype.rm{ background-position: -315px -87px; }
+
+.nature .weapontype.rs{ background-position: -287px -69px; }
+.thumb .nature .weapontype.rs{ background-position: -180px -43px; }
+.hd .nature .weapontype.rs{ background-position: -360px -87px; }
+
+.nature .health.xl{ background-position: -55px -50px; }
+.thumb .nature .health.xl{ background-position: -35px -31px; }
+.hd .nature .health.xl{ background-position: -69px -62px; }
+
+.nature .health.l{ background-position: -37px -50px; }
+.thumb .nature .health.l{ background-position: -23px -31px; }
+.hd .nature .health.l{ background-position: -46px -62px; }
+
+.nature .health.m{ background-position: -19px -50px; }
+.thumb .nature .health.m{ background-position: -12px -31px; }
+.hd .nature .health.m{ background-position: -23px -62px; }
+
+.nature .health.s{ background-position: 0  -50px; }
+.thumb .nature .health.s{ background-position: 0  -31px; }
+.hd .nature .health.s{ background-position: -1px  -62px; }
+/**
+ * @section		Shadow 
+ **/
+.shadow  .card, .shadow .footer{  background-position: -573px 0}
+#forge .shadow.upgrade1 .card{  background-position:  -573px -267px }
+#forge .shadow.upgrade2 .card{  background-position:  -573px -534px }
+#forge .shadow.upgrade3 .card{  background-position:  -573px -801px }
+.thumb .shadow .card, .thumb .shadow .footer{  background-position: -360px 0}
+#forge .thumb .shadow.upgrade1 .card{  background-position:  -360px -168px }
+#forge .thumb .shadow.upgrade2 .card{  background-position:  -360px -336px }
+#forge .thumb .shadow.upgrade3 .card{  background-position:  -360px -504px }
+.hd .shadow .card, .hd .shadow .footer{  background-position: -720px 0}
+#forge .hd .shadow.upgrade1 .card{  background-position: -720px -335px }
+#forge .hd .shadow.upgrade2 .card{  background-position: -720px -670px }
+#forge .hd .shadow.upgrade3 .card{  background-position: -720px -1005px }
+
+.shadow .weapontype.special{ background-position: 0 -104px; }
+.thumb .shadow .weapontype.special{ background-position: 0 -65px; }
+.hd .shadow .weapontype.special{ background-position: 0 -130px; }
+
+.shadow .weapontype.mxl{ background-position: -36px -104px; }
+.thumb .shadow .weapontype.mxl{ background-position: -22.5px -65px; }
+.hd .shadow .weapontype.mxl{ background-position: -45px -130px; }
+
+.shadow .weapontype.ml{ background-position: -72px -104px; }
+.thumb .shadow .weapontype.ml{ background-position: -45px -65px; }
+.hd .shadow .weapontype.ml{ background-position: -90px -130px; }
+
+.shadow .weapontype.mm{ background-position: -108px -104px; }
+.thumb .shadow .weapontype.mm{ background-position: -67.5px -65px; }
+.hd .shadow .weapontype.mm{ background-position: -135px -130px; }
+
+.shadow .weapontype.ms{ background-position: -144px -104px; }
+.thumb .shadow .weapontype.ms{ background-position: -90px -65px; }
+.hd .shadow .weapontype.ms{ background-position: -180px -130px; }
+
+.shadow .weapontype.rxl{ background-position: -179px -104px; }
+.thumb .shadow .weapontype.rxl{ background-position: -112.5px -65px; }
+.hd .shadow .weapontype.rxl{ background-position: -225px -130px; }
+
+.shadow .weapontype.rl{ background-position: -215px -104px; }
+.thumb .shadow .weapontype.rl{ background-position: -135px -65px; }
+.hd .shadow .weapontype.rl{ background-position: -270px -130px; }
+
+.shadow .weapontype.rm{ background-position: -251px -104px; }
+.thumb .shadow .weapontype.rm{ background-position: -157.5px -65px; }
+.hd .shadow .weapontype.rm{ background-position: -315px -130px; }
+
+.shadow .weapontype.rs{ background-position: -287px -104px; }
+.thumb .shadow .weapontype.rs{ background-position: -180px -65px; }
+.hd .shadow .weapontype.rs{ background-position: -360px -130px; }
+
+.shadow .health.xl{ background-position: -55px -75px; }
+.thumb .shadow .health.xl{ background-position: -35px -47px; }
+.hd .shadow .health.xl{ background-position: -69px -93px; }
+
+.shadow .health.l{ background-position: -37px -75px; }
+.thumb .shadow .health.l{ background-position: -23px -47px; }
+.hd .shadow .health.l{ background-position: -46px -93px; }
+
+.shadow .health.m{ background-position: -19px -75px; }
+.thumb .shadow .health.m{ background-position: -12px -47px; }
+.hd .shadow .health.m{ background-position: -23px -93px; }
+
+.shadow .health.s{ background-position: 0  -75px; }
+.thumb .shadow .health.s{ background-position: 0  -47px; }
+.hd .shadow .health.s{ background-position: -1px  -93px; }
+
+/**
+ * @section		Super HD Cards
+ * @notes		card - 2148x500
+ * 						rarity - 224x56
+ * 						footer - 2148x80
+ * 						attack - 604x358
+ * 						health -140x270
+ **/
+.shd .fire, .shd .frost, .shd .nature,.shd .shadow{ position:relative; float:left; width:358px; height:500px;  background:url(../images/sprites/HD/card.png);  font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; }
+.shd .rarity{ position:absolute; bottom:6px; right:8px; width:56px; height:56px; background:url(../images/sprites/HD/rarity.png)  }
+.shd .weapontype{ position:absolute; bottom:0; left:1px; width:67px; height:64px;  background:url(../images/sprites/HD/attack.jpg) 0 0;  z-index:2 }
+.shd .health{ position:absolute; bottom:7px; left:183px; width:35px; height:45px; background:url(../images/sprites/HD/health.jpg);  z-index:2  }
+.shd .footer{ position:absolute; bottom:0; left:0; width:358px; height:80px; background:url(../images/sprites/HD/footer.jpg); }
+.shd .name{ position:absolute; top:17px; left:44px; color:#fff; font-size:21px;  letter-spacing:1px; z-index:2; }
+.shd .cost{ position:absolute; top:22px; right:28px;  width:40px; height:20px; text-align:center; color:#fff; font-size:17px;  z-index:2; }
+.shd .attack{ position:absolute; bottom:20px; left:68px; color:#fff; font-size:22px;  z-index:3; }
+.shd .defense{ position:absolute; bottom:20px; left:217px;  color:#fff; font-size:22px;  z-index:3; }
+.shd .category{ position:absolute; bottom:182px; left:32px;  color:#fff; font-size:22px;  z-index:2; }
+.shd .orb{ position:absolute; top:49px; right:7px; width:80px; height:33px; list-style:none; margin:0; padding:0;}
+.shd{ position:absolute; top:332px; left:23px; width:312px;  list-style:none; margin:0; padding:0; z-index:4; }
+/**
+ * @section		rarity
+ **/
+.shd .rarity.common{ background-position: -168px 0;  }
+.shd .rarity.uncommon{ background-position: -112px 0; }
+.shd .rarity.rare{ background-position:  -56px 0; }
+.shd .rarity.ultrarare{  background-position: 0 0; }
+/**
+ * @section		orb
+ **/
+.shd .orb li{ width:16px; height:16px; position:absolute; background:url(../images/sprites/HD/orb.png) 0 -80px; }
+.shd .orb .one{top:6px; right:4px; }
+.shd .orb .two{ top:11px; right:22px;}
+.shd .orb .three{top:11px; right:41px; }
+.shd .orb .four{ top:6px; right:59px; }
+.shd .orb .R{ background-position:0 0;}
+.shd .orb .B{ background-position:-16px 0;}
+.shd .orb .N{ background-position:-32px 0;}
+.shd .orb .S{ background-position:-48px 0;}
+.shd .orb .C{ background-position:-64px 0;}
+.shd .orb .E{ background-position:-80px 0;}
+/**
+ * @section		abilities
+ **/
+.shd li{ background:url(../images/sprites/HD/abilities_type.png) 0 -120px no-repeat; font-size:20px; color:#fff; line-height:21px; margin-bottom:2px; letter-spacing:-1px;  height:28px;}
+.shd li.activated, .shd li.passive, .shd li.interval,.shd li.enabling{ padding-left:36px; }
+.shd li.activated{ background-position: 0 -3px; }
+.shd li.passive{ background-position: 0 -28px; }
+.shd li.enabling{background-position: 0 -56px; }
+.shd li.interval{background-position: 0 -85px; }
+/**
+ * @section		Fire 
+ **/
+.shd .fire, .shd .fire .footer{  background-position:  0 0 }
+.shd .fire .weapontype.special{ background-position: 0 0; }
+.shd .fire .weapontype.mxl{ background-position: -67px 0; }
+.shd .fire .weapontype.ml{ background-position: -134px 0; }
+.shd .fire .weapontype.mm{ background-position: -201px 0; }
+.shd .fire .weapontype.ms{ background-position: -268px 0; }
+.shd .fire .weapontype.rxl{ background-position: -335px 0; }
+.shd .fire .weapontype.rl{ background-position: -402px 0; }
+.shd .fire .weapontype.rm{ background-position: -469px 0; }
+.shd .fire .health.rs{ background-position: -536px 0; }
+.shd .fire .health.xl{ background-position: -105px 0; }
+.shd .fire .health.l{ background-position: -70px 0; }
+.shd .fire .health.m{ background-position: -35px 0; }
+.shd .fire .health.s{ background-position: 0  0; }
+/**
+ * @section		Frost 
+ **/
+.shd .frost, .shd .frost .footer{  background-position: -358px 0}
+.shd .frost .weapontype.special{ background-position: 0 -64px; }
+.shd .frost .weapontype.mxl{ background-position: -67px -64px; }
+.shd .frost .weapontype.ml{ background-position: -134px -64px; }
+.shd .frost .weapontype.mm{ background-position: -201px -64px; }
+.shd .frost .weapontype.ms{ background-position: -268px -64px; }
+.shd .frost .weapontype.rxl{ background-position: -335px -64px; }
+.shd .frost .weapontype.rl{ background-position: -402px -64px; }
+.shd .frost .weapontype.rm{ background-position: -469px -64px; }
+.shd .frost .weapontype.rs{ background-position: -536px -64px; }
+.shd .frost .health.xl{ background-position: -105px -45px; }
+.shd .frost .health.l{ background-position: -70px -45px; }
+.shd .frost .health.m{ background-position: -35px -45px; }
+.shd .frost .health.s{ background-position: 0  -45px; }
+/**
+ * @section		Nature 
+ **/
+.shd .nature, .shd .nature .footer{  background-position: -716px 0}
+.shd .nature .weapontype.special{ background-position: 0 -128px; }
+.shd .nature .weapontype.mxl{ background-position: -67px -128px; }
+.shd .nature .weapontype.ml{ background-position: -134px -128px; }
+.shd .nature .weapontype.mm{ background-position: -201px -128px; }
+.shd .nature .weapontype.ms{ background-position: -268px -128px; }
+.shd .nature .weapontype.rxl{ background-position: -335px -128px; }
+.shd .nature .weapontype.rl{ background-position: -402px -128px; }
+.shd .nature .weapontype.rm{ background-position: -469px -128px; }
+.shd .nature .weapontype.rs{ background-position: -536px -128px; }
+.shd .nature .health.xl{ background-position: -105px -90px; }
+.shd .nature .health.l{ background-position: -70px -90px; }
+.shd .nature .health.m{ background-position: -35px -90px; }
+.shd .nature .health.s{ background-position: 0  -90px; }
+/**
+ * @section		Shadow 
+ **/
+.shd .shadow, .shd .shadow .footer{  background-position: -1074px 0}
+.shd .shadow .weapontype.special{ background-position: 0 -192px; }
+.shd .shadow .weapontype.mxl{ background-position: -67px -192px; }
+.shd .shadow .weapontype.ml{ background-position: -134px -192px; }
+.shd .shadow .weapontype.mm{ background-position: -201px -192px; }
+.shd .shadow .weapontype.ms{ background-position: -268px -192px; }
+.shd .shadow .weapontype.rxl{ background-position: -335px -192px; }
+.shd .shadow .weapontype.rl{ background-position: -402px -192px; }
+.shd .shadow .weapontype.rm{ background-position: -469px -192px; }
+.shd .shadow .weapontype.rs{ background-position: -536px -192px; }
+.shd .shadow .health.xl{ background-position: -105px -135px; }
+.shd .shadow .health.l{ background-position: -70px -135px; }
+.shd .shadow .health.m{ background-position: -35px -135px; }
+.shd .shadow .health.s{ background-position: 0  -135px; }

@@ -1,0 +1,643 @@
+/**
+ * @section		Defaults Portraits
+ * @subsection		Fire
+ **/
+.portrait.auraofpain { background-position: 0 -305px; } 
+.portrait.backlash { background-position: 0 -457px; } 
+.portrait.bannerofglory { background-position: 0 -609px; } 
+.portrait.bloodthirst { background-position: 0 -761px; } 
+.portrait.boombrothers { background-position: 0 -913px; } 
+.portrait.cometcatcher { background-position: 0 -1065px; } 
+.portrait.earthshaker { background-position: 0 -1217px; } 
+.portrait.emberstrike { background-position: 0 -1369px; } 
+.portrait.enforcer { background-position: 0 -1521px; } 
+.portrait.eruption { background-position: 0 -1673px; } 
+.portrait.firebomb { background-position: 0 -1825px; } 
+.portrait.firedancer { background-position: 0 -1977px; } 
+.portrait.firedragon { background-position: -168px -1px; } 
+.portrait.firesphere { background-position: -168px -153px; } 
+.portrait.firestalker { background-position: -168px -305px; } 
+.portrait.fireworm { background-position: -168px -457px; } 
+.portrait.giantslayer { background-position: -168px -609px; } 
+.portrait.inferno { background-position: -168px -761px; } 
+.portrait.juggernaut { background-position: -168px -913px; } 
+.portrait.lavafield { background-position: -168px -1065px; } 
+.portrait.magmafiend { background-position: -168px -1217px; } 
+.portrait.magmahurler { background-position: -168px -1369px; } 
+.portrait.magmaspore { background-position: -168px -1521px; } 
+.portrait.makeshifttower { background-position: -168px -1673px; } 
+.portrait.mine { background-position: -168px -1825px; } 
+.portrait.moloch { background-position: -168px -1977px; } 
+.portrait.morklaytrap { background-position: -336px -1px; } 
+.portrait.mortartower { background-position: -336px -153px; } 
+.portrait.rageclaws { background-position: -336px -305px; } 
+.portrait.rallyingbanner { background-position: -336px -457px; } 
+.portrait.ravage { background-position: -336px -609px; } 
+.portrait.rockettower { background-position: -336px -761px; } 
+.portrait.scavenger { background-position: -336px -913px; } 
+.portrait.scythefiends { background-position: -336px -1065px; } 
+.portrait.shrineofwar { background-position: -336px -1217px; } 
+.portrait.skyfiredrake { background-position: -336px -1369px; } 
+.portrait.spitfire { background-position: -336px -1521px; } 
+.portrait.strikers { background-position: -336px -1673px; } 
+.portrait.sunderer { background-position: -336px -1825px; } 
+.portrait.sunstriders { background-position: -336px -1977px; } 
+.portrait.suppression { background-position: -504px -1px; } 
+.portrait.termitehill { background-position: -504px -153px; } 
+.portrait.thugs { background-position: -504px -305px; } 
+.portrait.towerofflames { background-position: -504px -457px; } 
+.portrait.virtuoso { background-position: -504px -609px; } 
+.portrait.voodooshack { background-position: -504px -761px; } 
+.portrait.vulcan { background-position: -504px -913px; } 
+.portrait.wallbreaker { background-position: -504px -1065px; } 
+.portrait.wildfire { background-position: 0 -1px; } 
+.portrait.wrecker { background-position: 0 -153px; } 
+/**
+ * @subsection		Frost
+ **/
+.portrait.areaiceshield { background-position: 0 -305px; } 
+.portrait.armoredtower { background-position: 0 -457px; } 
+.portrait.avataroffrost { background-position: 0 -609px; } 
+.portrait.battleship { background-position: 0 -761px; } 
+.portrait.cannontower { background-position: 0 -913px; } 
+.portrait.coldsnap { background-position: 0 -1065px; } 
+.portrait.construct { background-position: 0 -1217px; } 
+.portrait.constructionhut { background-position: 0 -1369px; } 
+.portrait.defenders { background-position: 0 -1521px; } 
+.portrait.defensetower { background-position: 0 -1673px; } 
+.portrait.dreadnought { background-position: 0 -1825px; } 
+.portrait.frostcrystal { background-position: 0 -1977px; } 
+.portrait.frostmage { background-position: -168px -1px; } 
+.portrait.frostshard { background-position: -168px -153px; } 
+.portrait.frostsorceress { background-position: -168px -305px; } 
+.portrait.glaciershell { background-position: -168px -457px; } 
+.portrait.glyphoffrost { background-position: -168px -609px; } 
+.portrait.homesoil { background-position: -168px -761px; } 
+.portrait.icebarrier { background-position: -168px -913px; } 
+.portrait.iceguardian { background-position: -168px -1065px; } 
+.portrait.iceshieldtower { background-position: -168px -1217px; } 
+.portrait.icetornado { background-position: -168px -1369px; } 
+.portrait.imperials { background-position: -168px -1521px; } 
+.portrait.juicetank { background-position: -168px -1673px; } 
+.portrait.koboldengineer { background-position: -168px -1825px; } 
+.portrait.koboldlaboratory { background-position: -168px -1977px; } 
+.portrait.koboldtrick { background-position: -336px -1px; } 
+.portrait.lyrishknight { background-position: -336px -153px; } 
+.portrait.maelstrom { background-position: -336px -305px; } 
+.portrait.masterarchers { background-position: -336px -457px; } 
+.portrait.mountaineer { background-position: -336px -609px; } 
+.portrait.northguards { background-position: -336px -761px; } 
+.portrait.phalanx { background-position: -336px -913px; } 
+.portrait.retreatingcircle { background-position: -336px -1065px; } 
+.portrait.shatterice { background-position: -336px -1217px; } 
+.portrait.shieldbuilding { background-position: -336px -1369px; } 
+.portrait.shrineofmartyrs { background-position: -336px -1521px; } 
+.portrait.silverwindlancers { background-position: -336px -1673px; } 
+.portrait.skyelfcommander { background-position: -336px -1825px; } 
+.portrait.skyelfsage { background-position: -336px -1977px; } 
+.portrait.skyelftemplar { background-position: -504px -1px; } 
+.portrait.stronghold { background-position: -504px -153px; } 
+.portrait.tempest { background-position: -504px -305px; } 
+.portrait.timelessone { background-position: -504px -457px; } 
+.portrait.tremor { background-position: -504px -609px; } 
+.portrait.wardofthenorth { background-position: -504px -761px; } 
+.portrait.wareagle { background-position: -504px -913px; } 
+.portrait.whiterangers { background-position: -504px -1065px; } 
+.portrait.winterwitch { background-position: 0 -1px; } 
+.portrait.worldbreakergun { background-position: 0 -153px; } 
+/**
+ * @subsection		Nature
+ **/
+
+.portrait.breedinggrounds { background-position: -168px -1673px; }
+.portrait.burrower { background-position: -168px -1825px; }
+.portrait.colossus { background-position: -168px -1977px; }
+.portrait.creepingparalysis { background-position: -336px -1px; }
+.portrait.curseofoink { background-position: -336px -153px; }
+.portrait.deepcoilworm { background-position: -336px -305px; }
+.portrait.drones { background-position: -336px -457px; }
+.portrait.energyparasite { background-position: -336px -609px; }
+.portrait.enlightenment { background-position: -336px -761px; }
+.portrait.ensnaringroots { background-position: -336px -913px; }
+.portrait.fathomlord { background-position: -336px -1065px; }
+.portrait.fountainofrebirth { background-position: -336px -1217px; }
+.portrait.ghostspears { background-position: -336px -1369px; }
+.portrait.giantwyrm { background-position: -336px -1521px; }
+.portrait.grimvine { background-position: -336px -1673px; }
+.portrait.grovespirit { background-position: -336px -1825px; }
+.portrait.healinggardens { background-position: -336px -1977px; }
+.portrait.healingwell { background-position: -504px -1px; }
+.portrait.hurricane { background-position: -504px -153px; }
+.portrait.lifestream { background-position: -504px -305px; }
+.portrait.livingtower { background-position: -504px -457px; }
+.portrait.manawing { background-position: -504px -609px; }
+.portrait.markofthekeeper { background-position: -504px -761px; }
+.portrait.mauler { background-position: -504px -913px; }
+.portrait.mindcontrol { background-position: -504px -1065px; }
+.portrait.mindweaver { background-position: 0 -1px; }
+.portrait.noxiouscloud { background-position: 0 -153px; }
+.portrait.parasite { background-position: 0 -305px; }
+.portrait.parasiteswarm { background-position: 0 -457px; }
+.portrait.primaldefender { background-position: 0 -609px; }
+.portrait.primevalwatcher { background-position: 0 -761px; }
+.portrait.rayoflight { background-position: 0 -913px; }
+.portrait.razorleaf { background-position: 0 -1065px; }
+.portrait.regrowth { background-position: 0 -1217px; }
+.portrait.revenge { background-position: 0 -1369px; }
+.portrait.shaman { background-position: 0 -1521px; }
+.portrait.shrineofmemory { background-position: 0 -1673px; }
+.portrait.spearmen { background-position: 0 -1825px; }
+.portrait.spikeroot { background-position: 0 -1977px; }
+.portrait.sporelauncher { background-position: -168px -1px; }
+.portrait.surgeoflight { background-position: -168px -153px; }
+.portrait.swampdrake { background-position: -168px -305px; }
+.portrait.swiftclaw { background-position: -168px -457px; }
+.portrait.thornbark { background-position: -168px -609px; }
+.portrait.thunderstorm { background-position: -168px -761px; }
+.portrait.timeshifterspirit { background-position: -168px -913px; }
+.portrait.tunnel { background-position: -168px -1065px; }
+.portrait.werebeasts { background-position: -168px -1217px; }
+.portrait.wheelofgifts { background-position: -168px -1369px; }
+.portrait.windweavers { background-position: -168px -1521px; }
+/**
+ * @subsection		Shadow
+ **/
+
+.portrait.altarofchaos { background-position: -168px -153px; }
+.portrait.altarofnihil { background-position: -168px -305px; }
+.portrait.ashbonepyro { background-position: -168px -457px; }
+.portrait.auraofcorruption { background-position: -168px -609px; }
+.portrait.bloodhealing { background-position: -168px -761px; }
+.portrait.churchofnegation { background-position: -168px -913px; }
+.portrait.corpseexplosion { background-position: -168px -1065px; }
+.portrait.cultistmaster { background-position: -168px -1217px; }
+.portrait.darkelfassassins { background-position: -168px -1369px; }
+.portrait.deathray { background-position: -168px -1521px; }
+.portrait.decomposer { background-position: -168px -1673px; }
+.portrait.dreadcharger { background-position: -168px -1825px; }
+.portrait.embalmersshrine { background-position: -168px -1977px; }
+.portrait.executor { background-position: -336px -1px; }
+.portrait.fallenskyelf { background-position: -336px -153px; }
+.portrait.forsaken { background-position: -336px -305px; }
+.portrait.furnaceofflesh { background-position: -336px -457px; }
+.portrait.harvester { background-position: -336px -609px; }
+.portrait.infect { background-position: -336px -761px; }
+.portrait.lifestealer { background-position: -336px -913px; }
+.portrait.lifeweaving { background-position: -336px -1065px; }
+.portrait.motivate { background-position: -336px -1217px; }
+.portrait.mutatingfrenzy { background-position: -336px -1369px; }
+.portrait.nastysurprise { background-position: -336px -1521px; }
+.portrait.necrofury { background-position: -336px -1673px; }
+.portrait.nightcrawler { background-position: -336px -1825px; }
+.portrait.noxtrooper { background-position: -336px -1977px; }
+.portrait.overlord { background-position: -504px -1px; }
+.portrait.phasetower { background-position: -504px -153px; }
+.portrait.plague { background-position: -504px -305px; }
+.portrait.portalnexus { background-position: -504px -457px; }
+.portrait.resourcebooster { background-position: -504px -609px; }
+.portrait.riflecultists { background-position: -504px -761px; }
+.portrait.ripper { background-position: -504px -913px; }
+.portrait.shadowinsect { background-position: -504px -1065px; }
+.portrait.shadowmage { background-position: 0 -1px; }
+.portrait.shadowphoenix { background-position: 0 -153px; }
+.portrait.shadowworm { background-position: 0 -305px; }
+.portrait.shrineofgreed { background-position: 0 -457px; }
+.portrait.skeletonwarriors { background-position: 0 -609px; }
+.portrait.soulshatter { background-position: 0 -761px; }
+.portrait.stoneoftorment { background-position: 0 -913px; }
+.portrait.undeadarmy { background-position: 0 -1065px; }
+.portrait.unholyhero { background-position: 0 -1217px; }
+.portrait.unholypower { background-position: 0 -1369px; }
+.portrait.unstabledemon { background-position: 0 -1521px; }
+.portrait.voidmaw { background-position: 0 -1673px; }
+.portrait.voidstorm { background-position: 0 -1825px; }
+.portrait.wrathblades { background-position: 0 -1977px; }
+.portrait.wrathgazer { background-position: -168px -1px; }
+
+/**
+ * @section		Thumb Portraits
+ * @subsection		fire
+ **/
+.thumb .portrait.auraofpain { background-position: 0 -769px; } 
+.thumb .portrait.backlash { background-position: 0 -865px; } 
+.thumb .portrait.bannerofglory { background-position: 0 -961px; } 
+.thumb .portrait.bloodthirst { background-position: 0 -1057px; } 
+.thumb .portrait.boombrothers { background-position: 0 -1153px; } 
+.thumb .portrait.cometcatcher { background-position: 0 -1249px; } 
+.thumb .portrait.earthshaker { background-position: 0 -1345px; } 
+.thumb .portrait.emberstrike { background-position: 0 -1441px; } 
+.thumb .portrait.enforcer { background-position: 0 -1537px; } 
+.thumb .portrait.eruption { background-position: 0 -1633px; } 
+.thumb .portrait.firebomb { background-position: 0 -1729px; } 
+.thumb .portrait.firedancer { background-position: 0 -1825px; } 
+.thumb .portrait.firedragon { background-position: 0 -1921px; } 
+.thumb .portrait.firesphere { background-position: -106px -1px; } 
+.thumb .portrait.firestalker { background-position: -106px -97px; } 
+.thumb .portrait.fireworm { background-position: -106px -193px; } 
+.thumb .portrait.giantslayer { background-position: -106px -289px; } 
+.thumb .portrait.inferno { background-position: -106px -385px; } 
+.thumb .portrait.juggernaut { background-position: -106px -481px; } 
+.thumb .portrait.lavafield { background-position: -106px -577px; } 
+.thumb .portrait.magmafiend { background-position: -106px -673px; } 
+.thumb .portrait.magmahurler { background-position: -106px -769px; } 
+.thumb .portrait.magmaspore { background-position: -106px -865px; } 
+.thumb .portrait.makeshifttower { background-position: -106px -961px; } 
+.thumb .portrait.mine { background-position: -106px -1057px; } 
+.thumb .portrait.moloch { background-position: -106px -1153px; } 
+.thumb .portrait.morklaytrap { background-position: -106px -1249px; } 
+.thumb .portrait.mortartower { background-position: -106px -1345px; } 
+.thumb .portrait.rageclaws { background-position: -106px -1441px; } 
+.thumb .portrait.rallyingbanner { background-position: -106px -1537px; } 
+.thumb .portrait.ravage { background-position: -106px -1633px; } 
+.thumb .portrait.rockettower { background-position: -106px -1729px; } 
+.thumb .portrait.scavenger { background-position: -106px -1825px; } 
+.thumb .portrait.scythefiends { background-position: -106px -1921px; } 
+.thumb .portrait.shrineofwar { background-position: -212px -1px; } 
+.thumb .portrait.skyfiredrake { background-position: -212px -97px; } 
+.thumb .portrait.spitfire { background-position: -212px -193px; } 
+.thumb .portrait.strikers { background-position: -212px -289px; } 
+.thumb .portrait.sunderer { background-position: -212px -385px; } 
+.thumb .portrait.sunstriders { background-position: -212px -481px; } 
+.thumb .portrait.suppression { background-position: -212px -577px; } 
+.thumb .portrait.termitehill { background-position: -212px -673px; } 
+.thumb .portrait.thugs { background-position: 0 -1px; } 
+.thumb .portrait.towerofflames { background-position: 0 -97px; } 
+.thumb .portrait.virtuoso { background-position: 0 -193px; } 
+.thumb .portrait.voodooshack { background-position: 0 -289px; } 
+.thumb .portrait.vulcan { background-position: 0 -385px; } 
+.thumb .portrait.wallbreaker { background-position: 0 -481px; } 
+.thumb .portrait.wildfire { background-position: 0 -577px; } 
+.thumb .portrait.wrecker { background-position: 0 -673px; } 
+/**
+ * @subsection		frost
+ **/
+.thumb .portrait.areaiceshield { background-position: 0 -1153px; } 
+.thumb .portrait.armoredtower { background-position: 0 -1249px; } 
+.thumb .portrait.avataroffrost { background-position: 0 -1345px; } 
+.thumb .portrait.battleship { background-position: 0 -1441px; } 
+.thumb .portrait.cannontower { background-position: 0 -1537px; } 
+.thumb .portrait.coldsnap { background-position: 0 -1633px; } 
+.thumb .portrait.construct { background-position: 0 -1729px; } 
+.thumb .portrait.constructionhut { background-position: 0 -1825px; } 
+.thumb .portrait.defenders { background-position: 0 -1921px; } 
+.thumb .portrait.defensetower { background-position: -106px -1px; } 
+.thumb .portrait.dreadnought { background-position: -106px -97px; } 
+.thumb .portrait.frostcrystal { background-position: -106px -193px; } 
+.thumb .portrait.frostmage { background-position: -106px -289px; } 
+.thumb .portrait.frostshard { background-position: -106px -385px; } 
+.thumb .portrait.frostsorceress { background-position: -106px -481px; } 
+.thumb .portrait.glaciershell { background-position: -106px -577px; } 
+.thumb .portrait.glyphoffrost { background-position: -106px -673px; } 
+.thumb .portrait.homesoil { background-position: -106px -769px; } 
+.thumb .portrait.icebarrier { background-position: -106px -865px; } 
+.thumb .portrait.iceguardian { background-position: -106px -961px; } 
+.thumb .portrait.iceshieldtower { background-position: -106px -1057px; } 
+.thumb .portrait.icetornado { background-position: -106px -1153px; } 
+.thumb .portrait.imperials { background-position: -106px -1249px; } 
+.thumb .portrait.juicetank { background-position: -106px -1345px; } 
+.thumb .portrait.koboldengineer { background-position: -106px -1441px; } 
+.thumb .portrait.koboldlaboratory { background-position: -106px -1537px; } 
+.thumb .portrait.koboldtrick { background-position: -106px -1633px; } 
+.thumb .portrait.lyrishknight { background-position: -106px -1729px; } 
+.thumb .portrait.maelstrom { background-position: -106px -1825px; } 
+.thumb .portrait.masterarchers { background-position: -106px -1921px; } 
+.thumb .portrait.mountaineer { background-position: -212px -1px; } 
+.thumb .portrait.northguards { background-position: -212px -97px; } 
+.thumb .portrait.phalanx { background-position: -212px -193px; } 
+.thumb .portrait.retreatingcircle { background-position: -212px -289px; } 
+.thumb .portrait.shatterice { background-position: -212px -385px; } 
+.thumb .portrait.shieldbuilding { background-position: -212px -481px; } 
+.thumb .portrait.shrineofmartyrs { background-position: -212px -577px; } 
+.thumb .portrait.silverwindlancers { background-position: -212px -673px; }
+.thumb .portrait.skyelfcommander { background-position: 0 -1px; } 
+.thumb .portrait.skyelfsage { background-position: 0 -97px; } 
+.thumb .portrait.skyelftemplar { background-position: 0 -193px; } 
+.thumb .portrait.stronghold { background-position: 0 -289px; } 
+.thumb .portrait.tempest { background-position: 0 -385px; } 
+.thumb .portrait.timelessone { background-position: 0 -481px; } 
+.thumb .portrait.tremor { background-position: 0 -577px; } 
+.thumb .portrait.wardofthenorth { background-position: 0 -673px; } 
+.thumb .portrait.wareagle { background-position: 0 -769px; } 
+.thumb .portrait.whiterangers { background-position: 0 -865px; } 
+.thumb .portrait.winterwitch { background-position: 0 -961px; } 
+.thumb .portrait.worldbreakergun { background-position: 0 -1057px; } 
+/**
+ * @subsection		nature
+ **/
+.thumb .portrait.breedinggrounds { background-position: 0 -769px; } 
+.thumb .portrait.burrower { background-position: 0 -865px; } 
+.thumb .portrait.colossus { background-position: 0 -961px; } 
+.thumb .portrait.creepingparalysis { background-position: 0 -1057px; } 
+.thumb .portrait.curseofoink { background-position: 0 -1153px; } 
+.thumb .portrait.deepcoilworm { background-position: 0 -1249px; } 
+.thumb .portrait.drones { background-position: 0 -1345px; } 
+.thumb .portrait.energyparasite { background-position: 0 -1441px; } 
+.thumb .portrait.enlightenment { background-position: 0 -1537px; } 
+.thumb .portrait.ensnaringroots { background-position: 0 -1633px; } 
+.thumb .portrait.fathomlord { background-position: 0 -1729px; } 
+.thumb .portrait.fountainofrebirth { background-position: 0 -1825px; } 
+.thumb .portrait.ghostspears { background-position: 0 -1921px; } 
+.thumb .portrait.giantwyrm { background-position: -106px -1px; } 
+.thumb .portrait.grimvine { background-position: -106px -97px; } 
+.thumb .portrait.grovespirit { background-position: -106px -193px; } 
+.thumb .portrait.healinggardens { background-position: -106px -289px; } 
+.thumb .portrait.healingwell { background-position: -106px -385px; } 
+.thumb .portrait.hurricane { background-position: -106px -481px; } 
+.thumb .portrait.lifestream { background-position: -106px -577px; } 
+.thumb .portrait.livingtower { background-position: -106px -673px; } 
+.thumb .portrait.manawing { background-position: -106px -769px; } 
+.thumb .portrait.markofthekeeper { background-position: -106px -865px; } 
+.thumb .portrait.mauler { background-position: -106px -961px; } 
+.thumb .portrait.mindcontrol { background-position: -106px -1057px; } 
+.thumb .portrait.mindweaver { background-position: -106px -1153px; } 
+.thumb .portrait.noxiouscloud { background-position: -106px -1249px; } 
+.thumb .portrait.parasite { background-position: -106px -1345px; } 
+.thumb .portrait.parasiteswarm { background-position: -106px -1441px; } 
+.thumb .portrait.primaldefender { background-position: -106px -1537px; } 
+.thumb .portrait.primevalwatcher { background-position: -106px -1633px; } 
+.thumb .portrait.rayoflight { background-position: -106px -1729px; } 
+.thumb .portrait.razorleaf { background-position: -106px -1825px; } 
+.thumb .portrait.regrowth { background-position: -106px -1921px; } 
+.thumb .portrait.revenge { background-position: -212px -1px; } 
+.thumb .portrait.shaman { background-position: -212px -97px; } 
+.thumb .portrait.shrineofmemory { background-position: -212px -193px; } 
+.thumb .portrait.spearmen { background-position: -212px -289px; } 
+.thumb .portrait.spikeroot { background-position: -212px -385px; } 
+.thumb .portrait.sporelauncher { background-position: -212px -481px; } 
+.thumb .portrait.surgeoflight { background-position: -212px -577px; } 
+.thumb .portrait.swampdrake { background-position: -212px -673px; } 
+.thumb .portrait.swiftclaw { background-position: 0 -1px; } 
+.thumb .portrait.thornbark { background-position: 0 -97px; } 
+.thumb .portrait.thunderstorm { background-position: 0 -193px; } 
+.thumb .portrait.timeshifterspirit { background-position: 0 -289px; } 
+.thumb .portrait.tunnel { background-position: 0 -385px; } 
+.thumb .portrait.werebeasts { background-position: 0 -481px; } 
+.thumb .portrait.wheelofgifts { background-position: 0 -577px; } 
+.thumb .portrait.windweavers { background-position: 0 -673px; } 
+/**
+ * @subsection		shadow
+ **/
+.thumb .portrait.altarofchaos { background-position: -212px -577px; } 
+.thumb .portrait.altarofnihil { background-position: -212px -673px; } 
+.thumb .portrait.ashbonepyro { background-position: 0 -1px; } 
+.thumb .portrait.auraofcorruption { background-position: 0 -97px; } 
+.thumb .portrait.bloodhealing { background-position: 0 -193px; } 
+.thumb .portrait.churchofnegation { background-position: 0 -289px; } 
+.thumb .portrait.corpseexplosion { background-position: 0 -385px; } 
+.thumb .portrait.cultistmaster { background-position: 0 -481px; } 
+.thumb .portrait.darkelfassassins { background-position: 0 -577px; } 
+.thumb .portrait.deathray { background-position: 0 -673px; } 
+.thumb .portrait.decomposer { background-position: 0 -769px; } 
+.thumb .portrait.dreadcharger { background-position: 0 -865px; } 
+.thumb .portrait.embalmersshrine { background-position: 0 -961px; } 
+.thumb .portrait.executor { background-position: 0 -1057px; } 
+.thumb .portrait.fallenskyelf { background-position: 0 -1153px; } 
+.thumb .portrait.forsaken { background-position: 0 -1249px; } 
+.thumb .portrait.furnaceofflesh { background-position: 0 -1345px; } 
+.thumb .portrait.harvester { background-position: 0 -1441px; } 
+.thumb .portrait.infect { background-position: 0 -1537px; } 
+.thumb .portrait.lifestealer { background-position: 0 -1633px; } 
+.thumb .portrait.lifeweaving { background-position: 0 -1729px; } 
+.thumb .portrait.motivate { background-position: 0 -1825px; } 
+.thumb .portrait.mutatingfrenzy { background-position: 0 -1921px; } 
+.thumb .portrait.nastysurprise { background-position: -106px -1px; } 
+.thumb .portrait.necrofury { background-position: -106px -97px; } 
+.thumb .portrait.nightcrawler { background-position: -106px -193px; } 
+.thumb .portrait.noxtrooper { background-position: -106px -289px; } 
+.thumb .portrait.overlord { background-position: -106px -385px; } 
+.thumb .portrait.phasetower { background-position: -106px -481px; } 
+.thumb .portrait.plague { background-position: -106px -577px; } 
+.thumb .portrait.portalnexus { background-position: -106px -673px; } 
+.thumb .portrait.resourcebooster { background-position: -106px -769px; } 
+.thumb .portrait.riflecultists { background-position: -106px -865px; } 
+.thumb .portrait.ripper { background-position: -106px -961px; } 
+.thumb .portrait.shadowinsect { background-position: -106px -1057px; } 
+.thumb .portrait.shadowmage { background-position: -106px -1153px; } 
+.thumb .portrait.shadowphoenix { background-position: -106px -1249px; } 
+.thumb .portrait.shadowworm { background-position: -106px -1345px; } 
+.thumb .portrait.shrineofgreed { background-position: -106px -1441px; } 
+.thumb .portrait.skeletonwarriors { background-position: -106px -1537px; } 
+.thumb .portrait.soulshatter { background-position: -106px -1633px; } 
+.thumb .portrait.stoneoftorment { background-position: -106px -1729px; } 
+.thumb .portrait.undeadarmy { background-position: -106px -1825px; } 
+.thumb .portrait.unholyhero { background-position: -106px -1921px; } 
+.thumb .portrait.unholypower { background-position: -212px -1px; } 
+.thumb .portrait.unstabledemon { background-position: -212px -97px; } 
+.thumb .portrait.voidmaw { background-position: -212px -193px; } 
+.thumb .portrait.voidstorm { background-position: -212px -289px; } 
+.thumb .portrait.wrathblades { background-position: -212px -385px; } 
+.thumb .portrait.wrathgazer { background-position: -212px -481px; } 
+/**
+ * @section		Thumb Portraits
+ * @subsection		fire
+ **/
+.HD .portrait.auraofpain { background-position: 0 -951px; } 
+.HD .portrait.boombrothers { background-position: -210px -1141px; } 
+.HD .portrait.bloodthirst { background-position: -210px -1331px; } 
+.HD .portrait.backlash { background-position: -210px -1521px; } 
+.HD .portrait.bannerofglory { background-position: -210px -1711px; } 
+.HD .portrait.cometcatcher { background-position: -210px -761px; } 
+.HD .portrait.earthshaker { background-position: -210px -951px; } 
+.HD .portrait.emberstrike { background-position: -210px -571px; } 
+.HD .portrait.enforcer { background-position: -210px -381px; } 
+.HD .portrait.eruption { background-position: -210px -191px; } 
+.HD .portrait.firebomb { background-position: -210px -1px; } 
+.HD .portrait.firedancer { background-position: 0 -1901px; } 
+.HD .portrait.firedragon { background-position: 0 -1711px; } 
+.HD .portrait.firesphere { background-position: 0 -1521px; } 
+.HD .portrait.firestalker { background-position: 0 -1331px; } 
+.HD .portrait.fireworm { background-position: 0 -1141px; } 
+.HD .portrait.lavafield { background-position: -210px -1901px; } 
+.HD .portrait.inferno { background-position: -420px -1px; } 
+.HD .portrait.juggernaut { background-position: -420px -191px; } 
+.HD .portrait.giantslayer { background-position: -420px -381px; } 
+.HD .portrait.scavenger { background-position: -420px -571px; } 
+.HD .portrait.rockettower { background-position: -420px -761px; } 
+.HD .portrait.ravage { background-position: -420px -951px; } 
+.HD .portrait.rallyingbanner { background-position: -420px -1141px; } 
+.HD .portrait.rageclaws { background-position: -420px -1331px; } 
+.HD .portrait.mortartower { background-position: -420px -1521px; } 
+.HD .portrait.morklaytrap { background-position: -420px -1711px; } 
+.HD .portrait.moloch { background-position: -420px -1901px; } 
+.HD .portrait.mine { background-position: -630px -1px; } 
+.HD .portrait.makeshifttower { background-position: -630px -191px; } 
+.HD .portrait.magmaspore { background-position: -630px -381px; } 
+.HD .portrait.magmahurler { background-position: -630px -571px; } 
+.HD .portrait.magmafiend { background-position: -630px -761px; } 
+.HD .portrait.termitehill { background-position: -630px -951px; } 
+.HD .portrait.thugs { background-position: -630px -1141px; } 
+.HD .portrait.suppression { background-position: -630px -1331px; } 
+.HD .portrait.sunderer { background-position: -630px -1521px; } 
+.HD .portrait.sunstriders { background-position: -630px -1711px; } 
+.HD .portrait.strikers { background-position: -630px -1901px; } 
+.HD .portrait.skyfiredrake { background-position: -840px -1px; } 
+.HD .portrait.spitfire { background-position: -840px -191px; } 
+.HD .portrait.scythefiends { background-position: -840px -381px; } 
+.HD .portrait.shrineofwar { background-position: -840px -571px; } 
+.HD .portrait.towerofflames { background-position: 0 -1px; } 
+.HD .portrait.wrecker { background-position: 0 -191px; } 
+.HD .portrait.wildfire { background-position: 0 -381px; } 
+.HD .portrait.vulcan { background-position: 0 -571px; } 
+.HD .portrait.wallbreaker { background-position: 0 -761px; } 
+.HD .portrait.voodooshack { background-position: -840px -761px; } 
+.HD .portrait.virtuoso { background-position: -840px -951px; } 
+/**
+ * @subsection		frost
+ **/
+.HD .portrait.areaiceshield { background-position: -840px -381px; } 
+.HD .portrait.armoredtower { background-position: -840px -571px; } 
+.HD .portrait.avataroffrost { background-position: -840px -761px; } 
+.HD .portrait.battleship { background-position: -840px -951px; } 
+.HD .portrait.cannontower { background-position: 0 -1px; } 
+.HD .portrait.coldsnap { background-position: 0 -191px; } 
+.HD .portrait.construct { background-position: 0 -381px; } 
+.HD .portrait.constructionhut { background-position: 0 -571px; } 
+.HD .portrait.defenders { background-position: 0 -761px; } 
+.HD .portrait.defensetower { background-position: 0 -951px; } 
+.HD .portrait.dreadnought { background-position: 0 -1141px; } 
+.HD .portrait.frostcrystal { background-position: 0 -1331px; } 
+.HD .portrait.frostmage { background-position: 0 -1521px; } 
+.HD .portrait.frostshard { background-position: 0 -1711px; } 
+.HD .portrait.frostsorceress { background-position: 0 -1901px; } 
+.HD .portrait.glaciershell { background-position: -210px -1px; } 
+.HD .portrait.glyphoffrost { background-position: -210px -191px; } 
+.HD .portrait.homesoil { background-position: -210px -381px; } 
+.HD .portrait.icebarrier { background-position: -210px -571px; } 
+.HD .portrait.iceguardian { background-position: -210px -761px; } 
+.HD .portrait.iceshieldtower { background-position: -210px -951px; } 
+.HD .portrait.icetornado { background-position: -210px -1141px; } 
+.HD .portrait.imperials { background-position: -210px -1331px; } 
+.HD .portrait.juicetank { background-position: -210px -1521px; } 
+.HD .portrait.koboldengineer { background-position: -210px -1711px; } 
+.HD .portrait.koboldlaboratory { background-position: -210px -1901px; } 
+.HD .portrait.koboldtrick { background-position: -420px -1px; } 
+.HD .portrait.lyrishknight { background-position: -420px -191px; } 
+.HD .portrait.maelstrom { background-position: -420px -381px; } 
+.HD .portrait.masterarchers { background-position: -420px -571px; } 
+.HD .portrait.mountaineer { background-position: -420px -761px; } 
+.HD .portrait.northguards { background-position: -420px -951px; } 
+.HD .portrait.phalanx { background-position: -420px -1141px; } 
+.HD .portrait.retreatingcircle { background-position: -420px -1331px; } 
+.HD .portrait.shatterice { background-position: -420px -1521px; } 
+.HD .portrait.shieldbuilding { background-position: -420px -1711px; } 
+.HD .portrait.shrineofmartyrs { background-position: -420px -1901px; } 
+.HD .portrait.silverwindlancers { background-position: -630px -1px; } 
+.HD .portrait.skyelfcommander { background-position: -630px -191px; } 
+.HD .portrait.skyelfsage { background-position: -630px -381px; } 
+.HD .portrait.skyelftemplar { background-position: -630px -571px; } 
+.HD .portrait.stronghold { background-position: -630px -761px; } 
+.HD .portrait.tempest { background-position: -630px -951px; } 
+.HD .portrait.timelessone { background-position: -630px -1141px; } 
+.HD .portrait.tremor { background-position: -630px -1331px; } 
+.HD .portrait.wardofthenorth { background-position: -630px -1521px; } 
+.HD .portrait.wareagle { background-position: -630px -1711px; } 
+.HD .portrait.whiterangers { background-position: -630px -1901px; } 
+.HD .portrait.winterwitch { background-position: -840px -1px; } 
+.HD .portrait.worldbreakergun { background-position: -840px -191px; } 
+/**
+ * @subsection		nature
+ **/
+.HD .portrait.parasiteswarm { background-position: 0 -1px; } 
+.HD .portrait.primaldefender { background-position: 0 -191px; } 
+.HD .portrait.primevalwatcher { background-position: 0 -381px; } 
+.HD .portrait.rayoflight { background-position: 0 -571px; } 
+.HD .portrait.razorleaf { background-position: 0 -761px; } 
+.HD .portrait.regrowth { background-position: 0 -951px; } 
+.HD .portrait.revenge { background-position: 0 -1141px; } 
+.HD .portrait.shaman { background-position: 0 -1331px; } 
+.HD .portrait.shrineofmemory { background-position: 0 -1521px; } 
+.HD .portrait.spearmen { background-position: 0 -1711px; } 
+.HD .portrait.spikeroot { background-position: 0 -1901px; } 
+.HD .portrait.sporelauncher { background-position: -210px -1px; } 
+.HD .portrait.surgeoflight { background-position: -210px -191px; } 
+.HD .portrait.swampdrake { background-position: -210px -381px; } 
+.HD .portrait.swiftclaw { background-position: -210px -571px; } 
+.HD .portrait.thornbark { background-position: -210px -761px; } 
+.HD .portrait.thunderstorm { background-position: -210px -951px; } 
+.HD .portrait.timeshifterspirit { background-position: -210px -1141px; } 
+.HD .portrait.tunnel { background-position: -210px -1331px; } 
+.HD .portrait.werebeasts { background-position: -210px -1521px; } 
+.HD .portrait.wheelofgifts { background-position: -210px -1711px; } 
+.HD .portrait.windweavers { background-position: -210px -1901px; } 
+
+/**
+ * @subsection		shadow
+ **/
+.HD .portrait.breedinggrounds { background-position: -420px -1px; } 
+.HD .portrait.burrower { background-position: -420px -191px; } 
+.HD .portrait.colossus { background-position: -420px -381px; } 
+.HD .portrait.creepingparalysis { background-position: -420px -571px; } 
+.HD .portrait.curseofoink { background-position: -420px -761px; } 
+.HD .portrait.deepcoilworm { background-position: -420px -951px; } 
+.HD .portrait.drones { background-position: -420px -1141px; } 
+.HD .portrait.energyparasite { background-position: -420px -1331px; } 
+.HD .portrait.enlightenment { background-position: -420px -1521px; } 
+.HD .portrait.ensnaringroots { background-position: -420px -1711px; } 
+.HD .portrait.fathomlord { background-position: -420px -1901px; } 
+.HD .portrait.fountainofrebirth { background-position: -630px -1px; } 
+.HD .portrait.ghostspears { background-position: -630px -191px; } 
+.HD .portrait.giantwyrm { background-position: -630px -381px; } 
+.HD .portrait.grimvine { background-position: -630px -571px; } 
+.HD .portrait.grovespirit { background-position: -630px -761px; } 
+.HD .portrait.healinggardens { background-position: -630px -951px; } 
+.HD .portrait.healingwell { background-position: -630px -1141px; } 
+.HD .portrait.hurricane { background-position: -630px -1331px; } 
+.HD .portrait.lifestream { background-position: -630px -1521px; } 
+.HD .portrait.livingtower { background-position: -630px -1711px; } 
+.HD .portrait.manawing { background-position: -630px -1901px; } 
+.HD .portrait.markofthekeeper { background-position: -840px -1px; } 
+.HD .portrait.mauler { background-position: -840px -191px; } 
+.HD .portrait.mindcontrol { background-position: -840px -381px; } 
+.HD .portrait.mindweaver { background-position: -840px -571px; } 
+.HD .portrait.noxiouscloud { background-position: -840px -761px; } 
+.HD .portrait.parasite { background-position: -840px -951px; } 
+.HD .portrait.altarofchaos { background-position: -420px -381px; } 
+.HD .portrait.altarofnihil { background-position: -420px -571px; } 
+.HD .portrait.ashbonepyro { background-position: -420px -761px; } 
+.HD .portrait.auraofcorruption { background-position: -420px -951px; } 
+.HD .portrait.bloodhealing { background-position: -420px -1141px; } 
+.HD .portrait.churchofnegation { background-position: -420px -1331px; } 
+.HD .portrait.corpseexplosion { background-position: -420px -1521px; } 
+.HD .portrait.cultistmaster { background-position: -420px -1711px; } 
+.HD .portrait.darkelfassassins { background-position: -420px -1901px; } 
+.HD .portrait.deathray { background-position: -630px -1px; } 
+.HD .portrait.decomposer { background-position: -630px -191px; } 
+.HD .portrait.dreadcharger { background-position: -630px -381px; } 
+.HD .portrait.embalmersshrine { background-position: -630px -571px; } 
+.HD .portrait.executor { background-position: -630px -761px; } 
+.HD .portrait.fallenskyelf { background-position: -630px -951px; } 
+.HD .portrait.forsaken { background-position: -630px -1141px; } 
+.HD .portrait.furnaceofflesh { background-position: -630px -1331px; } 
+.HD .portrait.harvester { background-position: -630px -1521px; } 
+.HD .portrait.infect { background-position: -630px -1711px; } 
+.HD .portrait.lifestealer { background-position: -630px -1901px; } 
+.HD .portrait.lifeweaving { background-position: -840px -1px; } 
+.HD .portrait.motivate { background-position: -840px -191px; } 
+.HD .portrait.mutatingfrenzy { background-position: -840px -381px; } 
+.HD .portrait.nastysurprise { background-position: -840px -571px; } 
+.HD .portrait.necrofury { background-position: -840px -761px; } 
+.HD .portrait.nightcrawler { background-position: -840px -951px; } 
+.HD .portrait.noxtrooper { background-position: 0 -1px; } 
+.HD .portrait.overlord { background-position: 0 -191px; } 
+.HD .portrait.phasetower { background-position: 0 -381px; } 
+.HD .portrait.plague { background-position: 0 -571px; } 
+.HD .portrait.portalnexus { background-position: 0 -761px; } 
+.HD .portrait.resourcebooster { background-position: 0 -951px; } 
+.HD .portrait.riflecultists { background-position: 0 -1141px; } 
+.HD .portrait.ripper { background-position: 0 -1331px; } 
+.HD .portrait.shadowinsect { background-position: 0 -1521px; } 
+.HD .portrait.shadowmage { background-position: 0 -1711px; } 
+.HD .portrait.shadowphoenix { background-position: 0 -1901px; } 
+.HD .portrait.shadowworm { background-position: -210px -1px; } 
+.HD .portrait.shrineofgreed { background-position: -210px -191px; } 
+.HD .portrait.skeletonwarriors { background-position: -210px -381px; } 
+.HD .portrait.soulshatter { background-position: -210px -571px; } 
+.HD .portrait.stoneoftorment { background-position: -210px -761px; } 
+.HD .portrait.undeadarmy { background-position: -210px -951px; } 
+.HD .portrait.unholyhero { background-position: -210px -1141px; } 
+.HD .portrait.unholypower { background-position: -210px -1331px; } 
+.HD .portrait.unstabledemon { background-position: -210px -1521px; } 
+.HD .portrait.voidmaw { background-position: -210px -1711px; } 
+.HD .portrait.voidstorm { background-position: -210px -1901px; } 
+.HD .portrait.wrathblades { background-position: -420px -1px; } 
+.HD .portrait.wrathgazer { background-position: -420px -191px; } 

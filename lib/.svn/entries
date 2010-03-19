@@ -1,0 +1,40 @@
+10
+
+dir
+2
+https://faraujo.svn.cvsdude.com/forger/lib
+https://faraujo.svn.cvsdude.com/forger
+
+
+
+2010-02-22T21:47:17.001564Z
+1
+filipearaujo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+88fc8959-112d-4038-b9de-d7274db74480
+
+air
+dir
+
+jquery
+dir
+
+js
+dir
+
+updater
+dir
+
